@@ -1,0 +1,10 @@
+{
+  "name": "countdown-qatar-2022",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Ikko-T/countdown-worldcup-qatar-2022.git",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}
