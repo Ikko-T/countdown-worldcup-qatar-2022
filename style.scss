@@ -5,22 +5,35 @@
 }
 
 body {
-  background-color: antiquewhite;
-  // background-image: url(https://images.unsplash.com/photo-1605002713581-123e77bcf83d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d29ybGRjdXAlMjAyMDIyJTIwc29jY2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60);
-  // background-size: cover;
-  // background-position: center center;
-  min-height: 100vh;
   font-family: 'Roppins', sans-serif;
-  color: #fff;
+  background-color: antiquewhite;
+  margin: 0;
+}
+
+.slide {
+  position: relative;
+
+  img {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
 }
 
 .container {
+  position: absolute;
+  color: #fff;
   display: flex;
   flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   h1 {
     font-weight: normal;
-    font-size: 4rem;
+    font-size: clamp(1rem, 2.5vw, 4rem);
   }
 
   .countdown {
@@ -33,13 +46,13 @@ body {
 
       .text {
         font-weight: bold;
-        font-size: 6rem;
+        font-size: clamp(2.5rem, 7.5vw, 6rem);
         line-height: 1;
         margin: 0 2rem;
       }
 
       span {
-        font-size: 1.3rem;
+        font-size: clamp(0.5rem, 2.5vw, 1.3rem);
       }
     }
   }
