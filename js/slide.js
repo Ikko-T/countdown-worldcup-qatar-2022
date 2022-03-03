@@ -1,21 +1,26 @@
-window.addEventListener('load', function () {
-  viewSlide('.slide img');
-});
+const selectorName = 'img';
+const imgArray = document.querySelectorAll(selectorName);
+const imgNo = 0;
+const time = 2000;
 
-function viewSlide(className, slideNo = -1) {
-  const imgArray = document.querySelectorAll(className);
+window.onload = () => {
+  bgSlide(imgNo);
+};
 
-  if (slideNo >= 0) {
-    imgArray[slideNo].style.opacity = 0;
+function bgSlide(imgNo) {
+  if (imgNo >= 0) {
+    imgArray[imgNo].style.opacity = 0;
   }
 
-  slideNo++;
-  if (slideNo >= imgArray.length) {
-    slideNo = 0;
-  }
-  imgArray[slideNo].style.opacity = 1;
+  imgNo++;
 
-  setTimeout(function () {
-    viewSlide(className, slideNo);
-  }, 2000);
+  if (imgNo >= imgArray.length) {
+    imgNo = 0;
+  }
+
+  imgArray[imgNo].style.opacity = 1;
+
+  setTimeout(() => {
+    bgSlide(imgNo);
+  }, time);
 }
