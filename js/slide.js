@@ -1,7 +1,7 @@
 const selectorName = 'img';
 const imgArray = document.querySelectorAll(selectorName);
 const imgNo = 0;
-const time = 2000;
+const interval = 2000;
 
 window.onload = () => {
   bgSlide(imgNo);
@@ -22,5 +22,5 @@ function bgSlide(imgNo) {
 
   setTimeout(() => {
     bgSlide(imgNo);
-  }, time);
+  }, interval);
 }
