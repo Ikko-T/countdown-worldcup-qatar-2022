@@ -59,5 +59,9 @@ body {
 
   .box {
     margin: 5rem 0 0 5rem;
+
+    p {
+      font-size: clamp(1rem, 2vw, 2.5rem);
+    }
   }
 }
